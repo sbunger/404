@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <style>
+
+            * {
+                margin: 0;
+                padding: 0;
+
+                color: #ffffff;
+
+                image-rendering: pixelated;
+                overflow: hidden;
+            }
+
+            .container {
+                background-image: url("images/tile.png");
+
+                height: 100vh;
+                width: 100vw;
+                display: flex;
+
+                justify-content: center;
+                align-items: center;
+
+                flex-direction: column;
+
+                text-align: center;
+            }
+
+            h1 {
+                font-family: "Jacquard 24", system-ui;
+                font-size: 300px;
+
+                margin-bottom: 10px;
+
+                color: #f3e6f3;
+
+                animation: floatOffset 7.5s ease infinite;
+
+                text-shadow: -3px 0 #6F426E, 0 3px #6F426E, 3px 0 #6F426E, 0 -3px #6F426E, -8px 8px #6F426E, -7px 7px #6F426E, -6px 6px #6F426E, -5px 5px #6F426E, -4px 4px #6F426E, -3px 3px #6F426E, -2px 2px #6F426E, -1px 1px #6F426E;
+            }
+
+            h2 {
+                font-family: "Jersey 10", sans-serif;
+                font-size: 30px;
+                margin-bottom: 60px;
+                width: 500px;
+
+                color: #d2e8e2;
+
+                text-align: justify;
+
+                animation: float 7.5s ease infinite;
+
+                text-shadow: -2px 0 #5A8C83, 0 2px #5A8C83, 2px 0 #5A8C83, 0 -2px #5A8C83;
+            }
+
+            .planet {
+                position: absolute;
+            }
+
+            .earth {
+                left: 7%;
+                top: 8%;
+                animation: spin 20s linear infinite;
+            }
+
+            .mercury {
+                right: -2%;
+                bottom: 0;
+                animation: spin 60s linear infinite;
+            }
+
+            .asteroid1 {
+                right: 20%;
+                top: 7%;
+                animation: spinReverse 20s linear infinite;
+            }
+
+            .asteroid2 {
+                left: 12%;
+                bottom: 5%;
+                animation: spinReverse 80s linear infinite;
+            }
+
+            @keyframes spin {
+                from {
+                    transform: rotate(0deg);
+                }
+                to {
+                    transform: rotate(360deg);
+                }
+            }
+
+            @keyframes spinReverse {
+                from {
+                    transform: rotate(360deg);
+                }
+                to {
+                    transform: rotate(0deg);
+                }
+            }
+
+            @keyframes float {
+                0% {
+                    transform: translateY(0);
+                }
+                50% {
+                    transform: translateY(-15px);
+                }
+                100% {
+                    transform: translateY(0);
+                }
+            }
+
+            @keyframes floatOffset {
+                25% {
+                    transform: translateY(0);
+                }
+                75% {
+                    transform: translateY(-15px);
+                }
+            }
+        </style>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Jacquard+24&family=Jersey+10&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <img src="images/earth.png" class="planet earth">
+        <img src="images/mercury.png" class="planet mercury">
+        <img src="images/asteroid.png" class="planet asteroid1">
+        <img src="images/asteroid2.png" class="planet asteroid2">
+
+        <div class="container">
+            <h1 class="text">
+                404
+            </h1>
+            <h2 class="text">
+                The page you're looking for doesn't exist, was moved, or has been ejected into space.
+            </h2>
+        </div>
+
+        <script>
+
+        </script>
+    </body>
+</html>
